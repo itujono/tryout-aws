@@ -1,0 +1,60 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files\CMDer\bin;C:\Program Files\CMDer\vendor\conemu-maximus5\ConEmu\Scripts;C:\Program Files\CMDer\vendor\conemu-maximus5;C:\Program Files\CMDer\vendor\conemu-maximus5\ConEmu;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\gdipp\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\phlud_000\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\phlud_000\AppData\Local\atom\bin;C:\Program Files\Heroku\bin;C:\Users\phlud_000\AppData\Roaming\npm;C:\Program Files\MongoDB\Server\3.6\bin;C:\Users\phlud_000\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\Program Files\CMDer\
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.9.4
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "voucher app",
+    "version": "1.0.0",
+    "description": "A simple voucher identification app - powered by React",
+    "main": "index.js",
+    "scripts": {
+      "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+      "test": "echo \"No test specified\" && exit 0"
+    },
+    "keywords": [],
+    "author": "Riva Yudha",
+    "license": "ISC",
+    "devDependencies": {
+      "babel-core": "^6.23.1",
+      "babel-loader": "^7.1.2",
+      "babel-preset-react": "^6.23.0",
+      "babel-preset-stage-2": "^6.22.0",
+      "react-hot-loader": "^3.1.3",
+      "webpack": "^4.0.1",
+      "webpack-cli": "^2.0.10",
+      "webpack-dev-server": "^3.1.0"
+    },
+    "dependencies": {
+      "babel-preset-env": "^1.6.1",
+      "react": "^16.2.0",
+      "react-dom": "^16.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: package.json: Name contains illegal characters
+      at new MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at module.exports.exports.default (C:\Program Files (x86)\Yarn\lib\cli.js:37549:13)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:52434:51
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:109:13
+      at <anonymous>

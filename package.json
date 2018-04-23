@@ -1,14 +1,14 @@
 {
-  "name": "minimal-react-webpack-babel-setup",
+  "name": "voucher-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple voucher identification app - powered by React",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
     "test": "echo \"No test specified\" && exit 0"
   },
   "keywords": [],
-  "author": "",
+  "author": "Riva Yudha",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -22,7 +22,12 @@
   },
   "dependencies": {
     "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.8.3",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "reactbulma": "^3.0.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0"
   }
 }
