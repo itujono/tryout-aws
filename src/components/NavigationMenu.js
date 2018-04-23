@@ -1,20 +1,12 @@
 import React from "react";
-import { BrowserRoute, Route, Switch, NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const NavigationMenu = () => (
 	<ul>
-		<li className="active">
-			<a>Voucher List</a>
-		</li>
-		<li>
-			<a>My Voucher</a>
-		</li>
-		<li>
-			<a>Add Voucher</a>
-		</li>
-		<li>
-			<a>About</a>
-		</li>
+		<li> <NavLink to="/" exact={true}>Home</NavLink> </li>
+		<li> <NavLink to="/voucherlist">Voucher List</NavLink> </li>
+		<li> <NavLink to="/addvoucher">Add Voucher</NavLink> </li>
+		<li> <NavLink to="/about">About</NavLink> </li>
 	</ul>
 )
 

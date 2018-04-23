@@ -2,6 +2,7 @@ import React from "react";
 import { Hero, Container, Title, Tabs } from "reactbulma";
 import NavigationMenu from "./NavigationMenu";
 import Subtitle from "reactbulma/lib/components/Title/Subtitle";
+import AppRouter from '../routes'
 
 class App extends React.Component {
 	constructor() {
