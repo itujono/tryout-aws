@@ -1,6 +1,7 @@
 import React from "react";
 import { Hero, Container, Title, Tabs } from "reactbulma";
 import NavigationMenu from "./NavigationMenu";
+import Subtitle from "reactbulma/lib/components/Title/Subtitle";
 
 class App extends React.Component {
 	constructor() {
@@ -14,6 +15,7 @@ class App extends React.Component {
 				<Hero.Body>
 					<Container>
 						<Title>Sempardak Sungguh</Title>
+						<Subtitle>Dan selamat datang</Subtitle>
 					</Container>
 				</Hero.Body>
 				<Hero.Foot>

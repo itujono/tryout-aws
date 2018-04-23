@@ -26,6 +26,7 @@
     "node-sass": "^4.8.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
     "reactbulma": "^3.0.0",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0"

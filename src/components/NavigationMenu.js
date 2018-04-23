@@ -1,28 +1,21 @@
 import React from "react";
+import { BrowserRoute, Route, Switch, NavLink } from 'react-router-dom'
 
-const NavigationMenu = () => {
-	return (
-		<ul>
-			<li className="active">
-				<a>Overview</a>
-			</li>
-			<li>
-				<a>Modifiers</a>
-			</li>
-			<li>
-				<a>Grid</a>
-			</li>
-			<li>
-				<a>Elements</a>
-			</li>
-			<li>
-				<a>Components</a>
-			</li>
-			<li>
-				<a>Layout</a>
-			</li>
-		</ul>
-	);
-};
+const NavigationMenu = () => (
+	<ul>
+		<li className="active">
+			<a>Voucher List</a>
+		</li>
+		<li>
+			<a>My Voucher</a>
+		</li>
+		<li>
+			<a>Add Voucher</a>
+		</li>
+		<li>
+			<a>About</a>
+		</li>
+	</ul>
+)
 
 export default NavigationMenu;
