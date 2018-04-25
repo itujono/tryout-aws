@@ -1,0 +1,28 @@
+
+
+$reddish: #f00;
+$defaultSize: 1em;
+$successColor: #23d160;
+
+.is-active {
+    font-weight: bold;
+    color: $reddish
+}
+
+nav {
+    &.nav {
+        background-color: darken($color: $successColor, $amount: 12%);
+        padding: $defaultSize;
+        border-radius: 6px 6px 0 0;
+    }
+    .nav-item {
+        color: white;
+        margin-right: $defaultSize;
+    }
+}
+
+.hero {
+    &.is-success {
+        border-radius: 0 0 6px 6px;
+    }
+}

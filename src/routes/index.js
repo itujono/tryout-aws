@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom'
+import { Section } from 'reactbulma'
 import About from '../components/About'
 import App from '../components/App'
 import VoucherList from '../components/VoucherList'
@@ -9,17 +10,16 @@ import NavigationMenu from '../components/NavigationMenu'
 
 
 const AppRouter = () => (
-
     <BrowserRouter>
-        <div>
+        <Section>
+            <NavigationMenu />
             <Switch>
                 <Route path="/" component={App} exact={true}/>
                 <Route path="/voucherlist" component={VoucherList} />
                 <Route path="/addvoucher" component={AddVoucher} />
                 <Route path="/about" component={About}/>
             </Switch>
-            <NavigationMenu />
-        </div>
+        </Section>
     </BrowserRouter>
 )
 

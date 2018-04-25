@@ -1,12 +1,18 @@
 import React from 'react'
-import { Content } from 'reactbulma'
+import { Content, Hero, Container, Title } from 'reactbulma'
 
 
 const About = () => (
-    <Content>
-        <h2>Wah ini kan About page ya</h2>
-        <p>Oke bener-bener keren deh ya kalo gitu heheh.</p>
-    </Content>
+    <Hero success>
+        <Hero.Body>
+            <Container>
+                <Content>
+                    <Title>About page</Title>
+                    <p>All you might need to know about Voucher App</p>
+                </Content>
+            </Container>
+        </Hero.Body>
+    </Hero>
 )
 
 
