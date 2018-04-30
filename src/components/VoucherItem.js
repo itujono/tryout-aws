@@ -1,15 +1,13 @@
 import React from 'react'
-import {Table} from 'reactbulma'
+import {Table, Delete} from 'reactbulma'
 
 
 
-const VoucherItem = ({code, amount, users}) => (
-    <Table.Tr>
+const VoucherItem = ({code, amount, users, deleteVoucher}) => (
+    <Table.Tr className="table-row" onDoubleClick={(e) => deleteVoucher(code)}>
         <Table.Td>{code}</Table.Td>
         <Table.Td>{amount}</Table.Td>
-        <Table.Td>
-            { users.map(user => <p>{user}</p>) }
-        </Table.Td>
+        <Table.Td> {users} </Table.Td>
     </Table.Tr>
 )
 

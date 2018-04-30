@@ -9,6 +9,10 @@ $successColor: #23d160;
     color: $reddish
 }
 
+.mb2em {
+    margin-bottom: $defaultSize * 2;
+}
+
 nav {
     &.nav {
         background-color: darken($color: $successColor, $amount: 12%);
@@ -25,4 +29,42 @@ nav {
     &.is-success {
         border-radius: 0 0 6px 6px;
     }
+}
+
+.form {
+    margin-bottom: $defaultSize * 2;
+}
+
+.table {
+    .table-row {
+        position: relative;
+    }
+}
+
+.voucher-container {
+    justify-content: stretch;
+    flex-wrap: wrap;
+}
+
+.user-voucher {
+    flex-grow: 0 !important;
+    flex-basis: 24%;
+    margin-bottom: $defaultSize;
+    code {
+        font-size: 2 * $defaultSize
+    }
+    .apply {
+        margin-top: $defaultSize;
+    }
+    .titler {
+        color: transparentize($color: $successColor, $amount: .2)
+    }
+}
+
+.success {
+    color: #fed501
+}
+
+.danger {
+    color: #ff3860;
 }

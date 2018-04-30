@@ -1,0 +1,27 @@
+[
+  {
+    "code": "CODE1",
+    "amount": 50,
+    "users": []
+  },
+  {
+    "code": "CODE2",
+    "amount": 100,
+    "users": []
+  },
+  {
+    "code": "CODE3",
+    "amount": 200,
+    "users": []
+  },
+  {
+    "code": "CODE4",
+    "amount": 400,
+    "users": []
+  },
+  {
+    "code": "CODE5",
+    "amount": 500,
+    "users": []
+  }
+]
