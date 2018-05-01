@@ -12,7 +12,9 @@ class VoucherListUser extends React.Component {
         this.state = {
             vouchers,
             applied: false,
-            users: []
+            users: [],
+            historyItem: [],
+            historyAmount: 0
         }
 
         this.applyVoucher = this.applyVoucher.bind(this)
@@ -23,7 +25,7 @@ class VoucherListUser extends React.Component {
     applyVoucher(voucherInput) {
         const voucherCode = this.state.vouchers.map(voucher => voucher.code)
         if (voucherCode.includes(voucherInput)) {
-            this.setState(() => ({ applied: true }))
+            this.setState(prevState => ({ applied: true, historyItem: prevState.historyItem.concat(voucherInput) }))
         } else if (!voucherInput) {
             return 'Please fill up the field...'
         } else {
@@ -42,7 +44,14 @@ class VoucherListUser extends React.Component {
                 <Hero.Body>
                     <Container>
                         <Title>Know Some Vouchers?</Title>
-                        <ApplyVoucher applyVoucher={this.applyVoucher} />
+                        <ApplyVoucher
+                            applyVoucher={this.applyVoucher}
+                            code={this.state.vouchers.map(voucher => voucher.code)}
+                            amount={this.state.vouchers.map(voucher => voucher.amount)}
+                            applied={this.state.applied}
+                            historyItem={this.state.historyItem}
+                            historyAmount={this.state.historyAmount}
+                        />
                         {
                             this.state.applied && (
                                 <Notification info>

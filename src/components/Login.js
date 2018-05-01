@@ -1,6 +1,6 @@
 import React from 'react'
 import users from '../db/users.json'
-import { Control, Field, Input, Button } from 'reactbulma/lib/components';
+import { Control, Field, Input, Button, Notification, Delete } from 'reactbulma/lib/components';
 
 
 export default class Login extends React.Component {
@@ -8,7 +8,12 @@ export default class Login extends React.Component {
     constructor(props) {
         super(props)
 
+        this.state = {
+            error: undefined
+        }
+
         this.handleLogin = this.handleLogin.bind(this)
+        this.hideNotification = this.hideNotification.bind(this)
     }
 
     handleLogin(e) {
@@ -16,9 +21,13 @@ export default class Login extends React.Component {
         const username1 = e.target.elements.username.value.trim()
         const password2 = e.target.elements.password.value.trim()
 
-        if (this.props.username.includes(username1) && this.props.password.includes(password2)) {
-            this.props.handleLogin(username1, password2)
-        }
+        const error = this.props.handleLogin(username1, password2)
+
+        this.setState(() => ({ error }))
+    }
+
+    hideNotification() {
+        this.setState(() => ({ error: undefined }))
     }
 
     render() {
@@ -39,6 +48,13 @@ export default class Login extends React.Component {
                         <Button warning>Login</Button>
                     </Control>
                 </Field>
+                { this.state.error && (
+                        <Notification danger>
+                            <Delete onClick={this.hideNotification} />
+                            {this.state.error}
+                        </Notification>
+                    )
+                }
             </form>
         )
     }

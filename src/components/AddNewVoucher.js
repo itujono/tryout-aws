@@ -15,14 +15,12 @@ class AddNewVoucher extends React.Component {
 
         const code = e.target.elements.code.value.trim().toUpperCase()
         const amount = e.target.elements.amount.value.trim()
-        const users = e.target.elements.users.value.trim()
-        const voucher = { code, amount, users }
+        const voucher = { code, amount }
 
         if (voucher) {
             this.props.addNewVoucher(voucher)
             e.target.elements.code.value = ''
             e.target.elements.amount.value = ''
-            e.target.elements.users.value = ''
         }
     }
 
@@ -37,11 +35,6 @@ class AddNewVoucher extends React.Component {
                 <Field>
                     <Control>
                         <Input type="number" name="amount" placeholder="And the amount please..." />
-                    </Control>
-                </Field>
-                <Field>
-                    <Control>
-                        <Input name="users" placeholder="Users that's going to apply this code..." />
                     </Control>
                 </Field>
                 <Field>
