@@ -1,4 +1,5 @@
 import React from 'react'
+import vouchers from '../db/vouchers.json'
 import { Field, Control, Input, Button, Notification, Delete } from 'reactbulma'
 import HistoryTable from './HistoryTable';
 
@@ -7,6 +8,7 @@ class ApplyVoucher extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            vouchers,
             error: undefined,
             historyTable: false
         }
@@ -14,6 +16,18 @@ class ApplyVoucher extends React.Component {
         this.applyVoucher = this.applyVoucher.bind(this)
         this.hideNotification = this.hideNotification.bind(this)
         this.showHistoryTable = this.showHistoryTable.bind(this)
+    }
+
+    componentDidMount() {
+        const json = localStorage.getItem('vouchers')
+        const vouchers = JSON.parse(json)
+
+        if (vouchers) this.setState(() => ({ vouchers }))
+    }
+
+    componentDidUpdate() {
+        const json = JSON.stringify(this.state.vouchers)
+        localStorage.setItem('vouchers', json)
     }
 
     applyVoucher(e) {

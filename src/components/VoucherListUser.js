@@ -21,7 +21,19 @@ class VoucherListUser extends React.Component {
         this.hideNotification = this.hideNotification.bind(this)
     }
 
-    
+    componentDidMount() {
+        const json = localStorage.getItem('vouchers')
+        const vouchers = JSON.parse(json)
+
+
+        if (vouchers) this.setState(() => ({ vouchers }))
+    }
+
+    componentDidUpdate() {
+        const json = JSON.stringify(this.state.vouchers)
+        localStorage.setItem('vouchers', json)
+    }
+
     applyVoucher(voucherInput) {
         const voucherCode = this.state.vouchers.map(voucher => voucher.code)
         if (voucherCode.includes(voucherInput)) {

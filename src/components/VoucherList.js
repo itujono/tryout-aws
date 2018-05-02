@@ -19,17 +19,17 @@ class VoucherList extends React.Component {
         this.addNewVoucher = this.addNewVoucher.bind(this)
     }
 
-    // componentDidMount() {
-    //     const json = localStorage.getItem('vouchers')
-    //     const vouchers = JSON.parse(json)
+    componentDidMount() {
+        const json = localStorage.getItem('vouchers')
+        const vouchers = JSON.parse(json)
 
-    //     this.setState(() => ({ vouchers }))
-    // }
+        if (vouchers) this.setState(() => ({ vouchers }))
+    }
     
-    // componentDidUpdate() {
-    //     const json = JSON.stringify(this.state.vouchers)
-    //     localStorage.setItem('vouchers', json)
-    // }
+    componentDidUpdate() {
+        const json = JSON.stringify(this.state.vouchers)
+        localStorage.setItem('vouchers', json)
+    }
 
     toggleAddNew() {
         this.setState(prevState => ({ addNew: !prevState.addNew }))
@@ -59,6 +59,7 @@ class VoucherList extends React.Component {
                                 <AddNewVoucher addNewVoucher={this.addNewVoucher} />
                             )
                         }
+                        <p className="subtitle">Double click each table cell to delete</p>
                         <Table striped>
                             <Table.Body>
                                 <Table.Tr>
